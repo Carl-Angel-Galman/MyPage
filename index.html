@@ -1,39 +1,82 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
-        section { padding: 20px; }
-        img { max-width: 100%; height: auto; }
-        .gallery img { width: 200px; margin: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Construction</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+
+  .construction {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+  }
+
+  .gear {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    border-top: 8px solid #fda085;
+    animation: spin 2s linear infinite;
+    position: relative;
+  }
+
+  .gear::before, .gear::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+  }
+
+  .gear::before { transform: rotate(45deg) translate(-50%, -50%); }
+  .gear::after { transform: rotate(-45deg) translate(-50%, -50%); }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .message {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Hallo, ich bin [Dein Name]</h1>
-        <p>Zeichner & Kreativer</p>
-    </header>
 
-    <section>
-        <h2>Portfolio</h2>
-        <div class="gallery">
-            <img src="bild1.jpg" alt="Zeichnung 1">
-            <img src="bild2.jpg" alt="Zeichnung 2">
-        </div>
-    </section>
+<div class="construction">
+  <div class="gear"></div>
+  <h1>Under Construction</h1>
+  <div class="message">Please check back soon!</div>
+</div>
 
-    <section>
-        <h2>Über mich</h2>
-        <p>Ich liebe es, zu zeichnen und meine Ideen kreativ umzusetzen. Hier zeige ich einige meiner Werke.</p>
-    </section>
-
-    <section>
-        <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:meine@email.de">meine@email.de</a></p>
-    </section>
 </body>
 </html>
